@@ -25,8 +25,8 @@ await conn.sendMessage(from, { image: { url: data.icon }, caption: listdata }, {
 let sendapk = await conn.sendMessage(from , { document : { url : data.dllink  } , mimetype : 'application/vnd.android.package-archive' , fileName : data.name + '.' + 'apk',caption: '' } , { quoted: mek })
 await conn.sendMessage(from, { react: { text: '📁', key: sendapk.key }})
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key }})
-} catch (e) {
-    reply('𝔼𝕣𝕣𝕣𝕠𝕣')
-  l(e)
+}catch(e){
+console.log(e)
+reply(`${e}`)
 }
 })

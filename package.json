@@ -1,0 +1,32 @@
+{
+  "name": "Queen_Roshika",
+  "version": "1.0.0",
+  "description": "A Simple WhatsApp bot created By Hansa-Dewmina",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --deep-monitoring --attach --name Queen_Roshika",
+    "stop": "pm2 stop Queen_Roshika",
+    "restart": "pm2 restart Queen_Roshika"
+  },
+  "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@whiskeysockets/baileys": "6.6.0",
+    "api-dylux": "1.8.5",
+    "axios": "^1.2.5",
+    "dotenv": "^16.4.5",
+    "express": "latest",
+    "fb-downloader-new": "0.0.2",
+    "file_size_url": "^1.0.4",
+    "fs-extra": "^11.1.0",
+    "megajs": "^1.1.0",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
+    "pino": "^7.0.5",
+    "pm2": "^5.2.0",
+    "qrcode-terminal": "^0.12.0",
+    "ruhend-scraper": "7.0.6",
+    "util": "^0.12.4",
+    "vm": "^0.1.0",
+    "yt-search": "2.12.1"
+  }
+}

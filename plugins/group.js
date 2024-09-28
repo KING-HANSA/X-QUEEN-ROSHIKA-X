@@ -22,11 +22,10 @@ if (!isAdmins) return reply('You must be an admin to use this command.')
         const sendmsg = await conn.sendMessage(mek.chat.G_MUTE)
 await conn.sendMessage(from, { react: { text: `✅`, key: mek.key }}) 
 } catch (e) {
-reply('🛑 GROUP IS CLOSED MY BOT OWNER')
-l(e)
+    console.log(e)
+    reply(`🛑 GROUP IS CLOSED MY BOT OWNER`)
 }
 })
-
 
 
 cmd({
@@ -46,8 +45,8 @@ async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGr
         const sendmsg = await conn.sendMessage(mek.chat.G_UNMUTE)
 await conn.sendMessage(from, { react: { text: `✅`, key: mek.key }}) 
 } catch (e) {
-reply('🛑 GROUP IS OPEN MY BOT OWNER')
-l(e)
+    console.log(e)
+    reply(`🛑 GROUP IS OPEN MY BOT OWNER`)
 }
 })
 

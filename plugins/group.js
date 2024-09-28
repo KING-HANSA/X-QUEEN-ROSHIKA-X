@@ -1,5 +1,84 @@
 const config = require('../config')
+const os = require('os')
+const fs = require('fs')
 const { cmd, commands } = require('../command')
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson, jsonformat} = require('../lib/functions')
+const { default: makeWASocket, useMultiFileAuthState, WA_DEFAULT_EPHEMERAL, jidNormalizedUser, proto, getDevice, generateWAMessageFromContent, fetchLatestBaileysVersion, makeInMemoryStore, getContentType, generateForwardMessageContent, downloadContentFromMessage, jidDecode } = require('@whiskeysockets/baileys')
+//============================MUTE=====================================================
+cmd({
+    pattern: "mute",
+    react: "🔖",
+    desc: "close a group",
+    category: "group",
+    filename: __filename
+},
+async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{                   
+if (!isGroup) return reply('This command can only be used in a group.')
+if (!isBotAdmins) return reply('Bot must be an admin to use this command.')
+if (!isAdmins) return reply('You must be an admin to use this command.')
+                                  
+        await conn.groupSettingUpdate(mek.chat, 'announcement')
+        const sendmsg = await conn.sendMessage(mek.chat.G_MUTE)
+await conn.sendMessage(from, { react: { text: `✅`, key: mek.key }}) 
+} catch (e) {
+reply('🛑 GROUP IS CLOSED MY BOT OWNER')
+l(e)
+}
+})
+
+
+
+cmd({
+    pattern: "unmute",
+    react: "🔖",
+    desc: "open a group",
+    category: "group",
+    filename: __filename
+},
+async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+    try{                   
+        if (!isGroup) return reply('This command can only be used in a group.')
+        if (!isBotAdmins) return reply('Bot must be an admin to use this command.')
+        if (!isAdmins) return reply('You must be an admin to use this command.')
+    
+        await conn.groupSettingUpdate(mek.chat, 'not_announcement')
+        const sendmsg = await conn.sendMessage(mek.chat.G_UNMUTE)
+await conn.sendMessage(from, { react: { text: `✅`, key: mek.key }}) 
+} catch (e) {
+reply('🛑 GROUP IS OPEN MY BOT OWNER')
+l(e)
+}
+})
+
+
+
+cmd({
+pattern: "del",
+react: "❌",
+alias: [","],
+desc: "delete message",
+category: "group",
+filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants,  isItzcp, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+if (!isOwner ||  !isAdmins) return;
+try{
+if (!m.quoted) return reply(mg.notextfordel);
+const key = {
+            remoteJid: m.chat,
+            fromMe: false,
+            id: m.quoted.id,
+            participant: m.quoted.sender
+        }
+        await conn.sendMessage(m.chat, { delete: key })
+} catch(e) {
+console.log(e);
+reply('Error!!')
+} 
+})
+
+
 
 cmd({
     pattern: "promote",

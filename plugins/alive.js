@@ -47,7 +47,7 @@ let aliveMessage = `
 *𝒮𝓉𝒶𝓎 𝒸𝑜𝓃𝓃𝑒𝒸𝓉𝑒𝒹 𝒶𝓃𝒹 𝑒𝓃𝒿𝑜𝓎 𝓉𝒽𝑒 𝓈𝑒𝓇𝓋𝒾𝒸𝑒𝓈!* 
 ╭──────────●●►
 │*© 𝙌𝙐𝙀𝙀𝙉 𝙍𝙊𝙎𝙃𝙄𝙆𝘼 𝘽𝙊𝙏 - MD * 
-│*💻 GitHub:* github.com/DEWMINA-HD/QUEEN-ROSHIKA 
+│*💻 GitHub:* github.com/KING-HANSA/X-QUEEN-ROSHIKA-X 
 ╰───────────●●►`
     
 await conn.sendMessage(from, { audio: { url: voice.alive }, mimetype: 'audio/mp4', ptt: true }, { quoted: mek })

@@ -22,7 +22,7 @@ async (conn, mek, m, { from, q, reply }) => {
 ${joke.punchline} 😄
 
 *© 𝙌𝙐𝙀𝙀𝙉 𝙍𝙊𝙎𝙃𝙄𝙆𝘼 𝘽𝙊𝙏 - MD* 
-*💻 GitHub:* github.com/DEWMINA-HD/QUEEN-ROSHIKA `;
+*💻 GitHub:* github.com/KING-HANSA/X-QUEEN-ROSHIKA-X `;
 
         return reply(jokeMessage);
     } catch (e) {

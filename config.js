@@ -21,7 +21,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "SSoyAB5T#agOXYhbTg3FAhCVVsYDtpoaHiJ8WJSgcqVbD_nF_RPc",
+SESSION_ID: process.env.SESSION_ID || "qRgkkZIR#7HCHWdziiEbIpwZKOFsGxt3yB6aT05t9DTduI-8MxXo",
 ALIVE_IMG: process.env.ALIVE_IMG || "https://i.postimg.cc/FKN3bv38/20240919-134939.jpg",
 ALIVE_MSG: process.env.ALIVE_MSG || "HELLOW THEIR, QUEEN ROSHIKA IS ALIVE...\n\nOWNER: HANSA DEWMINA\n\nTHANKS FOR USING QUEEN ROSHIKA MD\n\n> *© Qᴜᴇᴇɴ ʀᴏꜱʜɪᴋᴀ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ - ᴍᴅ*/n/n*> ɢɪᴛʜᴜʙ :* github.com/DEWMINA-HD/QUEEN-ROSHIKA",
 AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",

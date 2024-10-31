@@ -49,7 +49,7 @@ function startAutoBio(conn) {
     // Set a new interval to update the bio every minute (or any preferred time)
     autoBioInterval = setInterval(async () => {
         const time = new Date().toLocaleTimeString();  // Get the current time
-        const bioText = `💚𝐐𝐔𝐄𝐄𝐍 𝐑𝐎𝐒𝐇𝐈𝐊𝐀 𝐗 🪀 𝐁𝐘 𝐇𝐀𝐍𝐒𝐀 𝐃𝐄𝐖𝐌𝐈𝐍𝐀💛`;  // Set the bio text with time
+        const bioText = `💚24/7 𝗢𝗡𝗟𝗜𝗡𝗘 𝗕𝗢𝗧 𝗕𝗬 𝗛𝗔𝗡𝗦𝗔 𝗗𝗘𝗪𝗠𝗜𝗡𝗔 💛`;  // Set the bio text with time
         await conn.updateProfileStatus(bioText);  // Update the bot's bio
     }, 60 * 1000);  // 1 minute interval
 }
